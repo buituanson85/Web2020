@@ -1,0 +1,31 @@
+
+.main {
+    font-family: Arial, serif;
+    width:900px;
+    display:block;
+    margin:0 auto;
+}
+.img-slide {
+    max-width: 100%;
+    text-align: center;
+    padding: 1vw;
+}
+.img-slide img{
+    width: 100%;
+    height: auto;
+}
+.action{
+    display:block;
+    width:100%;
+    text-align:center;
+}
+.action a {
+    display:inline-block;
+    padding:5px 10px;
+    background:#f30;
+    color:#fff;
+    text-decoration:none;
+}
+.action a:hover{
+    background:#000;
+}

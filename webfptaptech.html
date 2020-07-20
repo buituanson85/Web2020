@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is a WebPage using Bootstrap 4</title>
+    <!-- Import Boostrap css, js, font awesome here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="css/webfptaptech.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  sticky-top">
+        <div class="container-fluid menu">
+           <div class="row">
+              <div class="col-4">
+                  <div class="nav-log">
+                      <a href="#"><img class="logo" src="img/logo-fpt-p.png" alt="logo"></a>
+                  </div>
+              </div>
+               <div class="col-8">
+                   <div class="menu-fpt">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse"
+                               data-target="#navbarResponsive">
+                           <span class="navbar-toggler-icon"></span>
+                       </button>
+                       <div class="collapse navbar-collapse h-100" id="navbarResponsive">
+                           <ul class="navbar-nav ml-auto h-100">
+                               <li class="nav-item">
+                                   <a class="nav-link active" href="#">Trang chủ</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="#">Chương trình học</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="#">lộ trình đào tạo</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="#">thông tin tuyển sinh</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="#">
+                                       <button type="button" class="btn btn-warning">Đăng ký khóa học</button>
+                                   </a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </nav>
+<!-- Carousel -->
+<section  class="section imagefpt">
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+            <li data-target="#slides" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="img-fluid" src="img/Hoc-Bong-A1.png" alt="img">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid" src="img/Hoc-Bong-A2.png" alt="img">
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid" src="img/Hoc-Bong-A3.png" alt="img">
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid" src="img/Hoc-Bong-A4.jpg" alt="img">
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid" src="img/Hoc-Bong-A5.jpg" alt="img">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 row-container">
+        <form method="get" action="#">
+            <h3>Đăng ký học FPT Aptech</h3>
+            <div class="form-group">
+                <label for="text"></label>
+                <input type="text" class="form-control" id="text" placeholder="Họ và tên">
+                <p class="emailError"></p>
+            </div>
+            <div class="form-group">
+                <label for="number" class="label"></label>
+                <input type="number" class="form-control" id="number" placeholder="Số điện thoại">
+                <p class="passwordError"></p>
+            </div>
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+                <p class="emailError"></p>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Cơ sở bạn muốn học</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>FPT Aptech Hà Nội</option>
+                    <option>FPT Aptech Hồ Chí Minh</option>
+                </select>
+            <button type="submit" class="btn btn-warning btn-block my-3">Đăng ký ngay</button>
+            </div>
+        </form>
+    </div>
+</section>
+<!--   2     -->
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h3 class="display-6">HỌC LẬP TRÌNH - TẠI SAO CHỌN HỌC TẠI FPT APTECH</h3>
+        </div>
+        <!-- Horizontal Rule -->
+        <div class="col-12">
+            <p>FPT Aptech được thành lập vào 1999, là hệ thống đào tạo lập trình viên quốc tế đầu tiên và lâu đời nhất tại Việt Nam.
+                Với 21 năm kinh nghiệm đào<br> tạo Công Nghệ Thông Tin (CNTT) nói chung và lập trình nói riêng, FPT Aptech đã có hơn
+                20,000 sinh viên tốt nghiệp, đã và đang công tác tại nhiều<br> công ty phần mềm lớn trong và ngoài nước. Đến nay FPT Aptech
+                vẫn luôn là đơn vị tiên phong trong lĩnh vực đào tạo CNTT và là sự lựa chọn học tập<br> số 1 của rất nhiều các bạn trẻ mong
+                muốn làm việc trong lĩnh vực CNTT.
+
+            </p>
+        </div>
+    </div>
+</div>
+<section class="section">
+    <div class="container padding">
+        <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-3 ">
+                <img src="img/icon01-fpt.png" alt="icon1">
+                <h6>Đào tạo lập trình viên đa năng</h6>
+                <p>Sinh viên không chỉ được trang bị đầy đủ kiến thức chuyên môn
+                    mà cả kỹ năng mềm với mong muốn trở thành những lập trình viên
+                    đa năng (Full-Stack) giỏi nghề với kiến thức sâu rộng.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="img/icon02-fpt.png" alt="icon1">
+                <h6>Giáo trình đào tạo mới nhất</h6>
+                <p>Chương trình đào tạo luôn cập nhật theo xu hướng công nghệ mới nhất
+                    ACCP i17 và chuẩn theo chương trình của Aptech Ấn Độ. Tổng thời gian
+                    học và hành lên đến hơn 800 giờ.
+                </p>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3">
+                <img src="img/icon03-fpt.png" alt="icon1">
+                <h6>Cam kết việc làm</h6>
+                <p>Sinh viên FPT Aptech khi nhập học sẽ được ký vào biên bản cam kết giới thiệu
+                    việc làm. Sau 2 năm, sinh viên sẽ được nhà trường gửi đến các doanh nghiệp
+                    đã liên kết để tiến hành các thủ tục phỏng vấn.
+                </p>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3">
+                <img src="img/icon04-fpt.png" alt="icon1">
+                <h6>Giá trị quốc tế</h6>
+                <p>Sinh viên được tiếp nhận tri thức quốc tế và nhận về bằng ADSE của Aptech
+                    (Advanced Diploma in Software Engineering) có giá trị toàn cầu.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--    3    -->
+    <section class="section">
+        <div class="container-fluid dk">
+            <div class="dangky">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 dk2">
+                    <a href="#">
+                        <button type="button" class="btn btn-warning">Đăng ký ngay</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 3.5  -->
+<section class="section">
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h4 class="display-5">CHƯƠNG TRÌNH HỌC</h4>
+                <h6>Chương trình đào tạo Lập Trình Viên Quốc Tế Song Bằng ADSE & L5DC</h6>
+            </div>
+        </div>
+    </div>
+</section>
+<!--   4   -->
+<section class="section">
+    <div class="container padding">
+        <div class="row padding">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="icon-top">
+                        <img class="img-icon" src="img/icon1-fpt.png">
+                        <div class="right-imgicon">
+                            <h5>ĐIỀU KIỆN</h5>
+                            <p>Tốt nghiệp THPT</p>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="img/a1-fpt.png">
+                    <div class="card-body">
+                        <a href="#"><span class="card-title">CHƯƠNG TRÌNH HỌC KỲ 1</span></a>
+                        <p class="card-text">Thiết kế web chuyên nghiệp & phân tích thiết kế hệ thống cơ sở dữ liệu.</p>
+                        <a href="#" class="btn btn-primary">xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="icon-top">
+                        <img class="img-icon" src="img/icon2-fpt.png">
+                        <div class="right-imgicon">
+                            <h5>THỜI GIAN HỌC</h5>
+                            <p>2 Năm</p>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="img/a2-fpt.png">
+                    <div class="card-body">
+                        <a href="#"><span class="card-title">CHƯƠNG TRÌNH HỌC KỲ 2</span></a>
+                        <p class="card-text">Lập trình hướng đối tượng với ngôn ngữ JAVASE, C#, PHP & phân tích hệ thống.</p>
+                        <a href="#" class="btn btn-success">xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="icon-top">
+                        <img class="img-icon" src="img/icon3-fpt.png">
+                        <div class="right-imgicon">
+                            <h5>SỐ HỌC KỲ</h5>
+                            <p>4 Học Kỳ</p>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="img/a3-fpt.png">
+                    <div class="card-body">
+                        <a href="#"><span class="card-title">CHƯƠNG TRÌNH HỌC KỲ 3</span></a>
+                        <p class="card-text">Chuyên sâu về công nghệ .NET và các kỹ thuật phân tích thiết kế phần mềm.</p>
+                        <a href="#" class="btn btn-warning">xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="icon-top">
+                        <img class="img-icon" src="img/icon4-fpt.png">
+                        <div class="right-imgicon">
+                            <h5>GIÁO TRÌNH</h5>
+                            <p>Chuyên nghiệp</p>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="img/a4-fpt.png">
+                    <div class="card-body">
+                        <a href="#"><span class="card-title">CHƯƠNG TRÌNH HỌC KỲ 4</span></a>
+                        <p class="card-text">Chuyên sâu về công nghệ JAVA. Lập trình ứng dụng di động trên Android</p>
+                        <a href="#" class="btn btn-danger">xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container-fluid dk">
+        <div class="dangky2">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 dk2">
+                <a href="#">
+                    <button type="button" class="btn btn-warning">Đăng ký ngay</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+#button {text-align: right;
+}
+</style>
+<link href="jquery-3.2.1.js" type="text/css">
+<script>
+function check()
+{
+	var name= document.getElementById("txtName").value; 	 	 	
+	var gender1=document.getElementById("Gender1").checked;
+	var gender2=document.getElementById("Gender2").checked;
+	var add= document.getElementById("txtAdd").value;
+	var email= document.getElementById("txtEmail").value;
+	var phone= document.getElementById("txtPhone").value;
+	var reE= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var reP= /^0\d{9,10}$/;
+	if(name.length==0)
+	{
+		alert("Name is not blank");
+		document.getElementById("txtName").focus();
+	}
+	else
+	{
+		if(gender1==false&&gender2==false)
+		{
+			alert("Gender is not selected");
+		}
+		else
+		{
+			if(gender1==true)
+				{
+				localStorage.setItem("keyGen","Male");
+				}
+				else
+				{
+				localStorage.setItem("keyGen","Female");
+				}
+			if(add.length==0)
+			{
+				alert("Address is not blank");
+				document.getElementById("txtAdd").focus();
+			}
+			else
+			{
+				if(email.length==0)
+				{
+					alert("Email is not blank");
+					document.getElementById("txtEmail").focus();
+				}
+				else
+				{
+					if(!reE.test(email))
+					{
+						alert("Email is not valid");
+						document.getElementById("txtEmail").focus();	
+					}
+					else
+					{
+						if(phone.length==0)
+						{
+							alert("Phone is not blank");
+							document.getElementById("txtPhone").focus();
+						}
+						else
+						{
+							if(isNaN(phone))
+							{
+								alert("Phone must be number");
+								document.getElementById("txtPhone").value="";
+								document.getElementById("txtPhone").focus();
+							}
+							else
+							{
+								if(!reP.test(phone))
+								{
+									alert("Phone is not valid");
+									document.getElementById("txtPhone").focus();
+								}
+								else
+								{
+									if(sltQua.value==0)
+									{
+										alert("Qualification is not selected");
+									}
+									else
+									{
+										switch(sltQua.value)
+										{
+											case "1":{
+												localStorage.setItem("keyQua","Diploma");
+												break;}
+											case "2":{
+												localStorage.setItem("keyQua","Bachelo Degree");
+												break;}
+											default:{
+												localStorage.setItem("keyQua","Master");
+												break;}
+										}
+										alert("Successfully");
+										localStorage.setItem("keyName",name);
+										localStorage.setItem("keyAdd",add);
+										localStorage.setItem("keyEmail",email);
+										localStorage.setItem("keyPhone",phone);
+										window.open("C:/Users/Hp/Desktop/Hoc%20tap/DeamwaverCS5/DWCS5/2.html");
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+  <table width="272" border="1" bgcolor="#8080C0" bordercolor="#000040">
+    <tr>
+      <th colspan="2" bgcolor="#8080C0" scope="col">Registration</th>
+    </tr>
+    <tr>
+      <th width="95" align="left" bgcolor="#8080C0" scope="row">Name</th>
+      <td width="161" bgcolor="#8080C0"><input type="text" name="txtName" id="txtName" placeholder="Enter Your Name"></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Password</th>
+      <td bgcolor="#8080C0"><input name="txtPass" type="password" id="txtPass"></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Re-password</th>
+      <td bgcolor="#8080C0"><input type="password" name="txtrePass" id="txtrePass"></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Gender</th>
+      <td bgcolor="#8080C0"><p>
+        <label>
+          <input type="radio" name="Gender" id="Gender1" value="1">
+          Male</label>
+        <label>
+          <input type="radio" name="Gender" id="Gender2" value="2" >
+          Famale</label>
+        <br>
+      </p></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Address</th>
+      <td bgcolor="#8080C0"><input type="text" name="txtAdd" id="txtAdd" placeholder="Enter Your Address"></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Email</th>
+      <td bgcolor="#8080C0"><input type="text" name="txtEmail" id="txtEmail" placeholder="Example@yahoo.com"></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Phone</th>
+      <td bgcolor="#8080C0"><input type="text" name="txtPhone" id="txtPhone" placeholder="Enter Your Phone Number"></td>
+    </tr>
+    <tr>
+      <th align="left" bgcolor="#8080C0" scope="row">Qualification</th>
+      <td bgcolor="#8080C0"><select name="sltQua" id="sltQua">
+        <option value="0">Select</option>
+        <option value="1">Diploma</option>
+        <option value="2">Bachelo Degree</option>
+        <option value="3">Master</option>
+      </select></td>
+    </tr>
+    <tr>
+      <th align="right" bgcolor="#8080C0" scope="row">&nbsp;</th>
+      <td bgcolor="#8080C0"><input type="button" name="button" id="button" value="Submit" onClick="check()">
+      <input type="reset" name="button2" id="button2" value="Reset"></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

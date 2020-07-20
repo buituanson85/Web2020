@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>slick slider go to slide example</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+
+    <link rel="stylesheet" href="css/silder-icon.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+
+</head>
+
+<body>
+
+<div class="main">
+    <div class="slider slider-for">
+        <div class="img-slide">
+            <img class="img-fluid" src="img/a1-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a2-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a3-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a4-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a2-fpt.png">
+        </div>
+    </div>
+    <div class="slider slider-nav">
+        <div class="img-slide">
+            <img src="img/a1-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a2-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a3-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a4-fpt.png">
+        </div>
+        <div class="img-slide">
+            <img src="img/a2-fpt.png">
+        </div>
+    </div>
+    <div class="action">
+        <a href="#" data-slide="3">go to slide 3</a>
+        <a href="#" data-slide="4">go to slide 4</a>
+        <a href="#" data-slide="5">go to slide 5</a>
+    </div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js'></script>
+
+
+
+<script type="text/javascript" ">
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        focusOnSelect: true
+    });
+
+    $('a[data-slide]').click(function(e) {
+        e.preventDefault();
+        var slideno = $(this).data('slide');
+        $('.slider-nav').slick('slickGoTo', slideno - 1);
+    });
+</script>
+
+
+
+
+</body>
+
+</html>
