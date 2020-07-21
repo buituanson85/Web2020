@@ -11,6 +11,15 @@ body {
     font-family: GothamPro, sans-serif;
     font-weight: 400;
 }
+.sticky-top{
+   width: 100%;
+}
+.container-fluid{
+    justify-content: space-between!important;
+}
+.navbar{
+    justify-content: space-between!important;
+}
 .container.menucontai{
     display: flex;
     flex-direction: row;
@@ -20,9 +29,10 @@ body {
 
 }
 .menu-fpt{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    text-align: right;
+    text-align: right!important;
 }
 .menu-2{
     text-align: right;
