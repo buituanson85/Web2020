@@ -153,5 +153,14 @@ label, .form-check-label, h1 {
     width: 40%;
     padding: 2vw 2vw 2vw 0;
 }
+.modal-header{
+    border-bottom: none!important;
+}
+.modal-span{
+    padding: 1rem 1rem;
+}
+.modal-content{
+    background-color: orange!important;
+}
 
 

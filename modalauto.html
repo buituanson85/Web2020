@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/modalauto.css"/>
+    <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script rel="stylesheet" type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Trở thành Lập Trình Viên Quốc Tế 4.0 tại FPT Aptech</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-span">
+                <span>Hãy để chúng tôi chủ động liên hệ tư vấn cho bạn về các ưu đãi, học phí, thời gian khai giảng tại FPT Aptech nhé!</span>
+            </div>
+            <div class="modal-body">
+                <form method="get" action="#">
+                    <div class="form-group">
+                        <label for="text">Họ và tên</label>
+                        <input type="text" class="form-control" id="text" placeholder="Vd: Nguyễn Văn A">
+                        <p class="emailError"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="label">Điện thoại liên hệ</label>
+                        <input type="number" class="form-control" id="number" placeholder="Vd: 0909xxxxxx">
+                        <p class="numberError"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email của bạn</label>
+                        <input type="email" class="form-control" id="email" placeholder="Vd: nguyenvana@gmail.com">
+                        <p class="emailError"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Cơ sở bạn muốn học</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>---------</option>
+                            <option>FPT Aptech Hà Nội</option>
+                            <option>FPT Aptech Hồ Chí Minh</option>
+                        </select>
+                        <button type="submit" class="btn btn-warning btn-block my-3">Đăng ký ngay</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#exampleModal').modal('show');
+    });
+</script>
+</body>
+</html>
